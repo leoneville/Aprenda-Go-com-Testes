@@ -1,11 +1,11 @@
 package main
 
-import "fmt"
+const prefixoOlaPortugues = "Olá, "
 
 func Ola(nome string) string {
-	return "Olá, " + nome
-}
+	if nome == "" {
+		nome = "Mundo"
+	}
 
-func main() {
-	fmt.Println(Ola("mundo"))
+	return prefixoOlaPortugues + nome
 }
