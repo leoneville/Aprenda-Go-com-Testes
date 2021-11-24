@@ -15,3 +15,12 @@ func SomaTudo(numerosParaSomar ...[]int) (somas []int) {
 
 	return
 }
+
+func SomaTodoOResto(numerosParaSomar ...[]int) (somas []int) {
+	for _, numeros := range numerosParaSomar {
+		final := numeros[1:]
+		somas = append(somas, Soma(final))
+	}
+
+	return
+}
