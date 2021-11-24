@@ -9,11 +9,8 @@ func Soma(numeros []int) int {
 }
 
 func SomaTudo(numerosParaSomar ...[]int) (somas []int) {
-	quantidadeDeNumeros := len(numerosParaSomar)
-	somas = make([]int, quantidadeDeNumeros)
-
-	for i, numeros := range numerosParaSomar {
-		somas[i] = Soma(numeros)
+	for _, numeros := range numerosParaSomar {
+		somas = append(somas, Soma(numeros))
 	}
 
 	return
