@@ -2,6 +2,9 @@ package perimetro
 
 import "math"
 
+type Forma interface {
+	Area() float64
+}
 type Retangulo struct {
 	Largura float64
 	Altura  float64
